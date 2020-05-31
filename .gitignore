@@ -1,0 +1,13 @@
+/# Folders to ignore
+
+/paper/*
+
+/presentations/*
+
+/old/*
+
+/# File types to ignore
+
+*.aux
+*.synctex.gz
+*.log
