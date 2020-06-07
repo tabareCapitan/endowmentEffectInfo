@@ -1,13 +1,18 @@
 /# Folders to ignore
 
-/paper/*
-
 /presentations/*
 
 /old/*
+
+/references/*
+
+/submission/*
 
 /# File types to ignore
 
 *.aux
 *.synctex.gz
 *.log
+*.fdb_latexmk
+*.fls
+TODO.txt

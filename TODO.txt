@@ -1,0 +1,22 @@
+BIG PICTURE TODO LIST ---------------------------------------------------------------------------------
+
+1. Based on your rev file, complete the intro and conclusion based on yours and Linda's feedback. I'm not touching the other sections until you are done with your edits.
+
+2. Small changes to ensure the analysis is, at least, compliant with AEA replication standards.
+
+3. Making Latex tables instead of the current excel ones.
+
+4. Preparing the Latex file without the text (i.e., figures, tables, appendices, bibtex).
+
+5. Finishing appendices, including the texdoc description of data manipulation (in which I have now changed the treatment of outliers to the one you originally had).
+
+SUNDAY WORK ------------------------------------------------------------------------------------------
+
+- Write WTA section
+- First draft intro
+- First draft conclusion
+- First draft abstract
+- bibtex
+- fix all citations
+- list needed appendices
+- start appendices
