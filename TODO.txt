@@ -12,11 +12,11 @@ BIG PICTURE TODO LIST ----------------------------------------------------------
 
 SUNDAY WORK ------------------------------------------------------------------------------------------
 
-- Write WTA section
+- (DONE)	Write WTA section
 - First draft intro
 - First draft conclusion
 - First draft abstract
-- bibtex
-- fix all citations
+- (DONE)	bibtex
+- (DONE)	fix all citations
 - list needed appendices
 - start appendices

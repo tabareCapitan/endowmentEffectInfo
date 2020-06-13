@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: endowmentEffectInfo.aux
+The style file: chicago.bst
+Database file #1: endowmentEffectInfo.bib
+Warning--empty year in cawleyImpactInformationDisclosure
+Warning--page numbers missing in cawleyImpactInformationDisclosure
+You've used 21 entries,
+            2861 wiz_defined-function locations,
+            773 strings with 9546 characters,
+and the built_in function-call counts, 14528 in all, are:
+= -- 1282
+> -- 923
+< -- 7
++ -- 276
+- -- 340
+* -- 1279
+:= -- 2608
+add.period$ -- 66
+call.type$ -- 21
+change.case$ -- 140
+chr.to.int$ -- 21
+cite$ -- 23
+duplicate$ -- 412
+empty$ -- 932
+format.name$ -- 388
+if$ -- 2687
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 21
+newline$ -- 108
+num.names$ -- 216
+pop$ -- 100
+preamble$ -- 1
+purify$ -- 267
+quote$ -- 0
+skip$ -- 432
+stack$ -- 0
+substring$ -- 882
+swap$ -- 148
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 410
+warning$ -- 2
+while$ -- 244
+width$ -- 0
+write$ -- 284
+(There were 2 warnings)

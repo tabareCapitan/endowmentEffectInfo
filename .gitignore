@@ -15,4 +15,7 @@
 *.log
 *.fdb_latexmk
 *.fls
-TODO.txt
+*.out
+*.bbl
+
+*.txt
