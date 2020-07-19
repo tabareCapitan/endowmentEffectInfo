@@ -5,45 +5,47 @@ The style file: chicago.bst
 Database file #1: endowmentEffectInfo.bib
 Warning--empty year in cawleyImpactInformationDisclosure
 Warning--page numbers missing in cawleyImpactInformationDisclosure
-You've used 21 entries,
+Warning--no number and no volume in rafiqHowMuchCalorieundefined/ed
+Warning--no number and no volume in thunstromWelfareEffectsNudges2020
+You've used 45 entries,
             2861 wiz_defined-function locations,
-            773 strings with 9546 characters,
-and the built_in function-call counts, 14528 in all, are:
-= -- 1282
-> -- 923
-< -- 7
-+ -- 276
-- -- 340
-* -- 1279
-:= -- 2608
-add.period$ -- 66
-call.type$ -- 21
-change.case$ -- 140
-chr.to.int$ -- 21
-cite$ -- 23
-duplicate$ -- 412
-empty$ -- 932
-format.name$ -- 388
-if$ -- 2687
+            929 strings with 14727 characters,
+and the built_in function-call counts, 31243 in all, are:
+= -- 2716
+> -- 2112
+< -- 8
++ -- 634
+- -- 746
+* -- 2866
+:= -- 5627
+add.period$ -- 138
+call.type$ -- 45
+change.case$ -- 313
+chr.to.int$ -- 45
+cite$ -- 49
+duplicate$ -- 835
+empty$ -- 1946
+format.name$ -- 858
+if$ -- 5755
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 108
-num.names$ -- 216
-pop$ -- 100
+missing$ -- 43
+newline$ -- 228
+num.names$ -- 456
+pop$ -- 203
 preamble$ -- 1
-purify$ -- 267
+purify$ -- 584
 quote$ -- 0
-skip$ -- 432
+skip$ -- 875
 stack$ -- 0
-substring$ -- 882
-swap$ -- 148
-text.length$ -- 7
+substring$ -- 1884
+swap$ -- 285
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 410
-warning$ -- 2
-while$ -- 244
+type$ -- 890
+warning$ -- 4
+while$ -- 491
 width$ -- 0
-write$ -- 284
-(There were 2 warnings)
+write$ -- 597
+(There were 4 warnings)

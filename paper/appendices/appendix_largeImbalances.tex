@@ -1,0 +1,97 @@
+% \documentclass[12pt]{article}
+%
+% \usepackage[utf8]{inputenc}
+% \usepackage[english]{babel}
+% \usepackage{csquotes}
+% \usepackage{mathtools}
+% \usepackage{hyperref}
+% \usepackage{geometry}
+% \usepackage{amsfonts}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{graphicx}
+% \usepackage[small,bf,center]{caption}
+% \usepackage{subfig}
+% \usepackage{setspace}
+% \usepackage{float}
+% \usepackage[section]{placeins} % for \FloatBarrier
+% \usepackage{indentfirst}
+% \usepackage[toc,page]{appendix}
+%
+% \usepackage{natbib}
+%   \bibliographystyle{chicago}
+%
+%
+% \begin{document}
+
+\subsection{Method}
+
+In this section we describe the method used to identify prognostic covariates with \emph{large} imbalances between groups. We started with 22 potential covariates from the answers to the survey questions at the end of the experiment.\footnote{We do not claim to have captured \emph{all} the characteristics that may be prognostic of information preferences, instead, we used our expertise to identify the ones we considered to be more important. As with any other empirical study, the rest will be captured in the error term of the econometric analyses.} We chose not to try to subjectively assess the degree of prognosis of each of these variables, instead, we assumed that all of these variables are prognostic of the dependent variable\textemdash i.e., information preferences. Thus, the task was only to identify \emph{large} imbalances between groups.
+
+We used an eclectic approach to identify \emph{large} differences, but our method closely follows advice given by \citet{imbensCausalInferenceStatistics2015} to assess differences in the distribution of a covariates between groups in the context of observational studies. For each covariate in each pair of groups, we calculated the univariate normalized difference in means, the multivariate difference in covariate distributions, and the natural logarithm of the ration of standard deviations. A description of each estimator, taken from \citet{imbensCausalInferenceStatistics2015} follows.
+
+% CHECK BOOK FOR PAGE AND ACCURACY
+
+\begin{displayquote}
+
+Let $\bar{X_c}$ and $\bar{X_t}$ denote the sample averages of the covariate values for the control and treatment group respectively:
+
+\begin{equation*}
+  \bar{X_c}=\frac{1}{N_c} \sum_{i:W_i=0} X_i
+  \text{  and  }
+  \bar{X_t}=\frac{1}{N_t} \sum_{i:W_i=0} X_i,
+\end{equation*}
+
+where (\ldots) $N_c$ is the number of control units, and $N_t$ is the number of treated units. Also, let $s_c^2$ and $s_t^2$ denote the conditional within-group sample variances of the covariate:
+
+\begin{equation*}
+  s_c^2=\frac{1}{N_c-1} \sum_{i:W_i=0} (X_i-\bar{X_c})^2
+  \text{  and  }
+  s_t^2=\frac{1}{N_t-1} \sum_{i:W_i=0} (X_i-\bar{X_t})^2,
+\end{equation*}
+
+\end{displayquote}
+
+Then the estimator of the normalized difference of means is
+
+\begin{equation*}
+  \hat{\Delta}_{ct}=
+    \frac{\bar{X_t}-\bar{X_c}}
+         {\sqrt{\frac{s_c^2+s_c^2}{2}}}
+\end{equation*}
+
+% CHECK REFERENCES BELOW
+
+As a rule of thumb, \citet{imbensCausalInferenceStatistics2015} say \enquote{\ldots when treatment groups have important covariates that are more than one-quarter or one-half of a standard deviation apart, simple regression methods are unreliable for removing biases associated with differences in covariates\ldots} (p.277).\footnote{First, we note that this rule of thumb is given in the context of observational studies. Second, we note that there are at least three versions of the normalized differences in means estimator in work by Guido Imbens and they all share the same rule of thumb (i.e., differences larger than 0.25 standard deviations are large). We use the version in \citet{imbensCausalInferenceStatistics2015} because it is the most recent. In Imbens \& Woolridge (2009, pp 24, JEL), the estimator sums up the variances but does not divide by 2. In Imbens \& Woolridge (NBER summer, 2007, p.34) and Imbens \& Wooldrige (Cemmep, UCL, 2000), the denominator is only the sum of the variances. Because different estimators share the same rule of thumb (although the last version does include two thresholds) along with the fact that we have not found the supporting evidence behind the rule of thumb, we take the rule of thumb as expert advice but do not rely solely on this rule to conclude.} \citet{imbensCausalInferenceStatistics2015} also suggest to use the multivariate difference in covariate distributions (p.313), however, there is no clear guidance on how large a difference should be to be considered \emph{large}.\footnote{In their illustrations on chapter 14, \citet{imbensCausalInferenceStatistics2015} interpret some of the multivariate difference in distribution estimates. In page 320, they interpret an estimate of 1.78 as suggestive that \enquote{…overall the two groups are substantially apart}. In page 353, a table including an estimate of 1.49 is discussed and interpreted as evidence of substantial differences, but the multivariate differences in distribution estimator is not interpreted directly. In page 324, a table including an estimate of 0.44 is discussed and interpreted as \enquote{suggesting that the balance in covariates is excellent\ldots}, but it does not interpret the estimator directly. Following this interpretation, one could consider differences lower or equal than 0.44 as small and differences higher or equal to 1.49 as large.}
+
+We also compared measures of dispersion of the covariates between groups. Using the same notation from \citet{imbensCausalInferenceStatistics2015} described above, the estimator is the natural logarithm ratio of standard deviations
+\begin{equation*}
+  \hat{\Gamma}_{ct}=ln(s_t)-ln(s_c).
+\end{equation*}
+We did not find any practical guidance to assess whether a difference is large or not.
+
+These measures\textemdash univariate and multivariate difference in means and logarithm ratio of standard deviations\textemdash give us a way to compare distributions based on the first two moments of their distributions. However, we found that insufficient to capture imbalances that would matter if a covariate is prognostic. Instead of inspecting normalized differences for higher-order moments of the distributions, as suggested in page 313 by \citet{imbensCausalInferenceStatistics2015}, we take their complementary advice:
+
+\begin{displayquote}
+  Finally, it may be useful to construct histograms of the distribution of a covariate in both treatment arms to detect visually subtle differences not captured by differences in means and variances, especially for covariates that are a priori believed to be highly associated with the outcomes.
+\end{displayquote}
+
+Consequently, for each variable, we used the results of the comparison of the normalized differences of means and variances, and the visual inspection of the histograms (or kernel densities for continuous variables), to subjectively identify \emph{large} differences.
+
+\subsection{Results}
+
+Here, we summarize the covariates with \emph{large} imbalances between groups identified for each of the three pairs of groups. In the online supplementary material, we include a detailed description of the application of the method for each pair of groups.
+
+First, we compare the group of participants who received menus without calorie information in their hypothetical choices (low baseline, groups A and B) to the group of participants who received menus with calorie information in their hypothetical choices (high baseline, groups C and D). There is only one covariate with a \emph{large} imbalance: riskPref (higher in no info).
+
+% ADD TABLE
+
+Second, within participants who received a menu without calorie information for their hypothetical choices (low baseline, groups A and B), we compare the group of people who received a menu without covered calorie information for their real choice (group A) to the group of people who received a menu with covered calorie information for their real choice (group B).
+
+There are 8 covariates with \emph{large} imbalances. Of them, 4 are higher in the no info group (expCat,  riskPref, beta, prevExp) and 4 are higher in the info group (collegeDegree, healthStatus, wishEatBetterOut, calNeedsKnowledge).
+
+Third, within participants who received a menu with calorie information for their hypothetical choices (groups C and D), we compare the group of people who received a menu without covered calorie information for their real choice (group C) to the group of people who received a menu with covered calorie information for their real choice (group D).
+
+There are 10 covariates with \emph{large} imbalances. Of them, 3 are higher in the no info group (exerciseImportant, weightImportant, calNeedsKnowledge), 5 are higher in the info group (age, collegeDegree, hungry, healthStatus, chain), and 2 are unclear (expCat, prevExp).
+
+% \end{document}

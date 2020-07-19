@@ -1,0 +1,60 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[small,bf,center]{caption}
+\usepackage{subfig}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage[section]{placeins} % for \FloatBarrier
+\usepackage{indentfirst}
+\usepackage[toc,page]{appendix}
+
+% klaas' file -------------------------
+\usepackage[T1]{fontenc}
+% Nicer default font (+ math font) than Computer Modern for most use cases
+\usepackage{mathpazo}
+\usepackage{mathabx} % Additional math symbols, like widehat, widecheck
+
+\usepackage{color} % Allow colors to be defined
+
+\setcounter{secnumdepth}{0}
+\let\IG\iffalse
+\let\ENDIG\fi
+\def\D{\displaystyle}
+\def\td#1#2{\frac{\D \mathit{d} #1}{\D \mathit{d} #2}}
+\def\std#1#2{\frac{\D \mathit{d}^2 #1}{\D \mathit{d} {#2}^2}}
+\def\ctd#1#2#3{\frac{\D \mathit{d}^2 #1}{\D \mathit{d} #2 \mathit{d} #3}}
+\def\pd#1#2{\frac{\D \partial #1}{\D \partial #2}}
+\def\pdi#1#2{\partial #1/\partial #2}
+\def\cpdi#1#2#3{\partial^2 #1/\partial #2 \partial #3}
+\def\spdi#1#2{\partial^2 #1/\partial {#2}^2}
+\def\spd#1#2{\frac{\D \partial^2 #1}{\D \partial {#2}^2}}
+\def\cpd#1#2#3{\frac{\D \partial^2 #1}{\D \partial #2 \partial #3}}
+\newcommand{\Lg}{\mathcal{L}}
+\newcommand{\LR}{\Leftrightarrow}
+\newcommand{\half}{\tfrac{1}{2}}
+\newcommand{\qrtr}{\tfrac{1}{4}}
+\newcommand{\eqs}{\buildrel s \over =}
+\newcommand{\foc}[1]{\ensuremath{\text{foc}\mspace{2mu}#1}}
+\newcommand{\cs}[1]{\ensuremath{\text{cs}\mspace{2mu}#1}}
+\newcommand{\nn}[1]{\ensuremath{\text{nn}\mspace{2mu}#1}}
+\allowdisplaybreaks
+
+\newcommand{\brk}{\vspace*{0.8em}\hrule}
+
+% -------------------------------------
+
+
+\usepackage[authoryear]{natbib}
+  \bibliographystyle{chicago}
+
+
+\newtheorem{prop}{Proposition}

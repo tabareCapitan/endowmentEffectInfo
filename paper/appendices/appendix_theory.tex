@@ -1,0 +1,215 @@
+\subsection{Proofs}
+
+All proofs are implied from \citet{koszegiReferenceDependentRiskAttitudes2007}.
+
+\subsection{Derivations}
+
+Under the DA approach, applying the general formula
+\begin{equation*}
+  U(L|R) \equiv \sum_{n=1}^N p_n\biggl\{u(x_n) + \mu\biggl(u(x_n) - \sum_{m=1}^M q_m
+u(r_m)\biggr)\biggr\}
+\end{equation*}
+yields that
+\begin{align*}
+  U(L^i|R^i)
+&= p_1\bigl\{x_1 + \mu\bigl(x_1 - \underbrace{[q_1r_1 + q_2r_2]}_{E[R^i]}\bigr)\bigr\}
+ + p_2\bigl\{x_2 + \mu\bigl(x_2 - \underbrace{[q_1r_1 + q_2r_2]}_{E[R^i]}\bigr)\bigr\}
+\\
+&= \half\bigl\{h + \bigl(h - [\half h + \half\ell]\bigr)\bigr\}
+ + \half\bigl\{\ell + \lambda\bigl(\ell - [\half h + \half \ell]\bigr)\bigr\}
+\\
+&= [\half h + \half \ell] + \half\bigl(h - [\half h + \half\ell]\bigr)
+   - \half\lambda\bigl([\half h + \half \ell] - \ell\bigr)
+\\
+&= [\half h + \half \ell] - \qrtr(\lambda - 1)(h - \ell).
+\end{align*}
+If the person ends up getting information, then with probability $\half$ she
+will learn that the cake is low-calorie. She will then get high intrinsic
+utility $h$ from consuming it, and will in addition experience ``elation'' $h
+- [\half h + \half\ell]$, because $h$ exceeds the intrinsic utility $\half h +
+\half \ell$ that she expected to get---her reference utility. Also with
+probability $\half$, however, the cake will turn out to be high-calorie. The
+person will then get low intrinsic utility $\ell$ from consuming it, and will
+in addition experience ``disappointment'' $\lambda(\ell - [\half h +
+\half\ell])$, because $\ell$ falls short of her reference utility. If $\lambda
+> 1$, the disappointment will outweigh the elation, leaving her with expected
+intrinsic utility $\half h + \half \ell$ from consuming the cake, but in
+addition net negative expected gain-loss utility $- \qrtr(\lambda - 1)(h -
+\ell) < 0$.
+
+The same formula yields that
+\begin{align*}
+  U(L^u|R^i)
+&= p\bigl\{x + \mu\bigl(x - \underbrace{[q_1r_1 + q_2r_2]}_{E[R^i]}\bigr)\bigr\}
+\\
+&= 1\cdot\bigl\{[\half h + \half \ell] + \bigl([\half h + \half \ell] - [\half h + \half \ell]\bigr)\bigr\}\\
+&= [\half h + \half \ell].
+\end{align*}
+Here, because the person ends up not getting information, she will get average
+intrinsic utility $\half h + \half \ell$ for sure. And because this is exactly
+what she expected to get, she experiences no elation or disappointment.
+
+Comparing the two utilities yields that
+\begin{equation*}
+  U(L^i|R^i) - U(L^u|R^i) = -\qrtr(\lambda-1)(h-\ell) < 0.
+\end{equation*}
+This shows that, because the person is disappointment averse ($\lambda > 1$),
+she will also be information adverse: she perceives herself as better off
+staying ignorant, because her disappointment from getting bad news would
+outweigh her elation from getting good news.
+
+Crucially, this result holds regardless of whether she started out expecting
+to get information or not, i.e., with reference lottery $R^i$ or $R^u$. This
+follows because the DA approach ``collapses'' the reference lottery into its
+expectation before evaluating gain-loss utility. And because $R^i$ and $R^u$
+have the same expectation $E[R^i] = E[R^u] = q_1r_1 + q_2r_2$, we find that
+$U(L^i|R^u) = U(L^i|R^i)$ and $U(L^u|R^u) = U(L^u|R^i)$, so also
+\begin{equation*}
+  U(L^i|R^u) - U(L^u|R^u) = U(L^i|R^i) - U(L^u|R^i) = -\qrtr(\lambda-1)(h-\ell) < 0.
+\end{equation*}
+There is, in other words no endowment effect for information: the person is
+equally information adverse, regardless of whether she expects to get
+information or not.
+
+Under the KR approach, however, the situation is quite different. Applying the
+general formula
+\begin{equation*}
+  U(L|R) \equiv \sum_{n=1}^N p_n\biggl\{u(x_n) + \sum_{m=1}^M q_m
+\mu\bigl(u(x_n) - u(r_m)\bigr)\biggr\}
+\end{equation*}
+yields that
+\begin{align*}
+  U(L^i|R^i)
+&= p_1\bigl\{x_1 + q_1\mu(x_1 - r_1) + q_2\mu(x_1 - r_2)\bigr\}
+ + p_2\bigl\{x_2 + q_1\mu(x_2 - r_1) + q_2\mu(x_2 - r_2)\bigr\}\\
+&= \half\bigl\{h + \half(h - h) + \half(h - \ell)\bigr\}
+ + \half\bigl\{\ell + \half\lambda(\ell - h) + \half(\ell - \ell)\bigr\}\\
+&= [\half h + \half \ell] +
+    \qrtr (h-\ell) - \qrtr \lambda(h-\ell)\\
+&= [\half h + \half \ell] - \qrtr(\lambda-1)(h - \ell).
+\end{align*}
+Again, if the person ends up getting information, she will learn with
+probability $\half$ that the cake is low-calorie and then get high intrinsic
+utility $h$ from consuming it. In addition, she will compare that utility {\em
+separately} to the two outcomes she {\em expected} to potentially get, given
+that she expected to be informed. Since she started out expecting to get $h$
+with probability $\half$, she will experience no elation from that first
+comparison; but since she expected to get only $\ell$ with probability $\half$
+also, she will experience elation $h-\ell$ from that second comparison. Also
+with probability $\half$, the cake will turn out to be high-calorie, yielding
+low intrinsic utility $\ell$. Comparing that utility again separately to the
+two outcomes $h$ or $\ell$ that she expected to get, she will experience
+disappointment $\lambda(\ell - h) < 0$ from the first comparison, and no
+disappointment from the second comparison. Aggregating over all these
+permutions leaves her with expected intrinsic utility $\half h + \half \ell$
+from consuming the cake, but in addition net negative expected gain-loss
+utility $-\qrtr(\lambda - 1)(h - \ell) < 0$.
+
+The same formula yields that
+\begin{align*}
+  U(L^u|R^i)
+&= p\bigl\{x + q_1\mu(x - r_1) + q_2\mu(x - r_2)\bigr\}
+\\
+&= 1\cdot\bigl\{[\half h + \half \ell] + \half\lambda([\half h + \half \ell] -
+h) + \half([\half h + \half \ell] - \ell)\bigr\}\\
+&= [\half h + \half \ell] +
+   \half\left([\half h + \half \ell] - \ell\right)
+   -\half\lambda\left(h - [\half h + \half \ell]\right)\\
+&= [\half h + \half \ell] - \qrtr(\lambda-1)(h - \ell).
+\end{align*}
+Here again, because the person ends up not getting information, she will get
+average intrinsic utility $\half h + \half \ell$ for sure. In addition, she
+will again compare that utility separately to the two outcomes she expected to
+potentially get, given that she expected to be informed. Since she started out
+expecting to get $h$ with probability $\half$, she will experience
+disappointment $\lambda([\half h + \half \ell] - h) < 0$ from getting the
+lower average utility instead; but since she expected to get only $\ell$ with
+probability $\half$ also, she will experience elation $[\half h + \half\ell] -
+\ell$ from that second comparison. Aggregating leaves her with expected
+intrinsic utility $\half h + \half \ell$ from consuming the cake, but in
+addition net negative expected gain-loss utility $-\qrtr(\lambda - 1)(h -
+\ell) < 0$.
+
+Comparing these first two utilities yields that
+\begin{equation*}
+  U(L^i|R^i) - U(L^u|R^i) = 0.
+\end{equation*}
+This shows that, despite being disappointment averse, the person is indifferent
+to getting information or not. The reason becomes clear if we compare the
+third lines of the derivations above:
+\begin{align*}
+  U(L^i|R^i) &= [\half h + \half \ell] +
+  \qrtr (h-\ell) - \qrtr \lambda(h-\ell)\\
+  U(L^u|R^i) &= [\half h + \half \ell] +
+  \half\left([\half h + \half \ell] - \ell\right)
+  -\half\lambda\left(h - [\half h + \half \ell]\right).
+\end{align*}
+Relative to becoming informed, staying ignorant cuts both the gain and loss
+utilities in half (from $[\half h + \half \ell] - \ell$ to $h - \ell$, and
+from $-\lambda(h - [\half h + \half \ell])$ to $-\lambda(h - \ell)$,
+respectively). But because it simultaneously doubles the probability that
+either the gain utility or the loss utility will be experienced (from $\half$
+to $\qrtr$), the net effect is a wash.
+
+Next, we have
+\begin{align*}
+  U(L^i|R^u)
+&= p_1\bigl\{x_1 + q\mu(x_1 - r)\bigr\}
+ + p_2\bigl\{x_2 + q\mu(x_2 - r)\bigr\}\\=
+&= \half\bigl\{h + 1\cdot(h - [\half h + \half\ell])\bigr\}
+ + \half\bigl\{\ell + 1\cdot\lambda(\ell - [\half h + \half\ell])\bigr\}\\
+&= [\half h + \half \ell] +
+\half(h-[\half h + \half \ell]) - \half \lambda([\half h + \half\ell] - \ell)\\
+&= [\half h + \half \ell] - \qrtr(\lambda-1)(h - \ell).
+\end{align*}
+If the person did not expect to be informed but ends up getting information,
+she will compare the intrinsic utility from the outcomes $h$ and $\ell$ to the
+utility $\half h + \half \ell$ that she expected to get. The elation $h -
+[\half h + \half \ell]$ with probability $\half$ will again be outweighed by
+the disappointment $ - \half \lambda([\half h + \half\ell] - \ell)$ with
+probability $\half$, resulting in net negative expected gain-loss utility
+$-\qrtr(\lambda - 1)(h - \ell) < 0$.
+
+Lastly, we have
+\begin{align*}
+  U(L^u|R^u)
+&= p\bigl\{x + q\mu(x - r)\bigr\}
+\\
+&= 1\cdot\bigl\{[\half h + \half \ell] + 1\cdot([\half h + \half \ell] - [\half
+h + \half \ell])\bigr\}\\
+&= [\half h + \half \ell].
+\end{align*}
+Since the person gets exactly what she expects, namely no information for
+sure, she experiences no gain-loss utility.
+
+Comparing the second two utilities yields that
+\begin{equation*}
+  U(L^i|R^u) - U(L^u|R^u) = -\qrtr(\lambda-1)(h-\ell) < 0.
+\end{equation*}
+This shows that, if the person expects not to get information, she will be
+information adverse. But since we found above that
+\begin{equation*}
+  U(L^i|R^i) - U(L^u|R^i) = 0,
+\end{equation*}
+i.e., that the person is indifferent about information if she {\em does} expect
+to get it, we now do have an endowment effect for information: the value of
+information is higher, namely zero instead of negative, for people who expect
+to get it.
+
+\brk
+
+\begin{center}
+\textbf{Instrumental information}
+\end{center}
+
+{\color{red}
+[Yet to be done. Remember that it doesn't change anything substantive
+for the KR approach, though: it just makes information more valuable, by the
+same amount, regardless of the reference lottery, so there is still exactly the
+same endowment effect.
+
+For the DA approach, it gives rise to an endowment effect as well (whereas
+there isn't one with non-instrumental information), but we're not
+claiming to differentiate between those approaches in our experiment anyway.
+]
+}

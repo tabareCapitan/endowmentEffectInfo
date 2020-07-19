@@ -1,16 +1,4 @@
-BIG PICTURE TODO LIST ---------------------------------------------------------------------------------
-
-1. Based on your rev file, complete the intro and conclusion based on yours and Linda's feedback. I'm not touching the other sections until you are done with your edits.
-
-2. Small changes to ensure the analysis is, at least, compliant with AEA replication standards.
-
-3. Making Latex tables instead of the current excel ones.
-
-4. Preparing the Latex file without the text (i.e., figures, tables, appendices, bibtex).
-
-5. Finishing appendices, including the texdoc description of data manipulation (in which I have now changed the treatment of outliers to the one you originally had).
-
-SUNDAY WORK ------------------------------------------------------------------------------------------
+PENDING WORK ---------------------------------------------------------------------------------------
 
 - (DONE)	Write WTA section
 - First draft intro
@@ -18,5 +6,19 @@ SUNDAY WORK --------------------------------------------------------------------
 - First draft abstract
 - (DONE)	bibtex
 - (DONE)	fix all citations
-- list needed appendices
-- start appendices
+- (DONE) 	list needed appendices
+- complete appendices
+	(PENDING)	Appendix A:	Proofs and derivations
+	(IN PROGRESS)	Appendix B:	Participants and procedures
+	(PENDING)	Appendix C:	Background data
+	(PENDING)	Appendix D:	Method to identify large imbalances
+- complete online supplementary material
+	(PENDING) Survey (ref in body)
+	(PENDING) Replication instructions (ref in body)
+	(PENDING) Survey questions (ref in Appendix C)
+	(PENDING) Application of method to identify large imbalances (ref in Appendix D)
+	(PENDING) Robustness to alternative assumptions of the WTA data
+
+OTHER PENDINGS
+- evaluation of MPL?
+- add # obs in each group to the body of the paper
