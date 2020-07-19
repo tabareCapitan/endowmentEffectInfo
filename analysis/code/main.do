@@ -12,13 +12,13 @@ version 14.2
 
 *** SET UP *********************************************************************
 
-run "$RUTA/code/settings.do"                                                    // UPDATED
+run "$RUTA/code/settings.do"
 
-run "$RUTA/code/installNewPrograms.do"                                          // UPDATED
+run "$RUTA/code/installNewPrograms.do"
 
 *** DATA MANAGEMENT ************************************************************
 
-run "$RUTA/code/importData.do"                                                  // UPDATED
+run "$RUTA/code/importData.do"
 
 run "$RUTA/code/cleanData.do"                                                   // NEED TEXDOC
 
@@ -34,7 +34,7 @@ run "$RUTA/code/calculateValueInfo.do"                                          
 
 *** DATA ANALYSIS **************************************************************
 
-run "$RUTA/code/descriptiveStatistics_excel.do"                                 // PENDING
+run "$RUTA/code/descriptiveStatistics.do"                                       // IN PROGRESS
 
 run "$RUTA/code/identifyLargeDifferences_excel.do"                              // PENDING
 
