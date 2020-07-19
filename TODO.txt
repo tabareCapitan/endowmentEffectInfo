@@ -1,18 +1,19 @@
 PENDING WORK ---------------------------------------------------------------------------------------
 
-- (DONE)	Write WTA section
-- First draft intro
-- First draft conclusion
-- First draft abstract
-- (DONE)	bibtex
-- (DONE)	fix all citations
-- (DONE) 	list needed appendices
-- complete appendices
-	(PENDING)	Appendix A:	Proofs and derivations
-	(IN PROGRESS)	Appendix B:	Participants and procedures
-	(PENDING)	Appendix C:	Background data
-	(PENDING)	Appendix D:	Method to identify large imbalances
-- complete online supplementary material
+REVISE
+
+	- abstract
+	- intro
+	- conclusion
+
+COMPLETE APPENDIX
+
+	- Appendix A:	Proofs and derivations
+	- Appendix C:	Background data				-> START HERE ON SUNDAY!
+	- Appendix D:	Method to identify large imbalances
+
+COMPLETE ONLINE SUPPLEMENTARY MATERIAL
+
 	(PENDING) Survey (ref in body)
 	(PENDING) Replication instructions (ref in body)
 	(PENDING) Survey questions (ref in Appendix C)
@@ -20,5 +21,8 @@ PENDING WORK -------------------------------------------------------------------
 	(PENDING) Robustness to alternative assumptions of the WTA data
 
 OTHER PENDINGS
-- evaluation of MPL?
-- add # obs in each group to the body of the paper
+
+	- evaluation of MPL?
+	- add # obs in each group to the body of the paper
+	- texdoc
+	- replication package
