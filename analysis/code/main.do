@@ -1,50 +1,52 @@
 /*******************************************************************************
-Project:      Reference-Dependent Preferences for Information
+Project:      Expecting to get it: An Endowment Effect for Information
 
 Author:       TabareCapitan.com
 
 Description:  Controls the flow of the analysis
 
-Created: 20190217 | Last modified: 20200101
+Created: 20190217 | Last modified: 20200719
 *******************************************************************************/
 version 14.2
 
 
 *** SET UP *********************************************************************
 
-run "$RUTA\code\settings.do"
+run "$RUTA/code/settings.do"                                                    // UPDATED
 
-run "$RUTA\code\installNewPrograms.do"
+run "$RUTA/code/installNewPrograms.do"                                          // UPDATED
 
 *** DATA MANAGEMENT ************************************************************
 
-run "$RUTA\code\importData.do"
+run "$RUTA/code/importData.do"                                                  // UPDATED
 
-run "$RUTA\code\cleanData.do"
+run "$RUTA/code/cleanData.do"                                                   // NEED TEXDOC
 
 *** CHOICE PROCESS DATA ********************************************************
 
-run "$RUTA\code\testUnderstanding.do"
+run "$RUTA/code/testUnderstanding.do"                                           // UPDATED
 
 *** ASSUMPTIONS ****************************************************************
 
-run "$RUTA\code\outliers.do"
+run "$RUTA/code/outliers.do"                                                    // NEED TEXDOC
 
-run "$RUTA\code\calculateValueInfo.do"
+run "$RUTA/code/calculateValueInfo.do"                                          // NEED TEXDOC
 
 *** DATA ANALYSIS **************************************************************
 
-run "$RUTA\code\descriptiveStatistics.do"
+run "$RUTA/code/descriptiveStatistics_excel.do"                                 // PENDING
 
-run "$RUTA\code\identifyLargeDifferences.do"
+run "$RUTA/code/identifyLargeDifferences_excel.do"                              // PENDING
 
     //calls balanceMeasures.ado
 
-run "$RUTA\code\results.do"
+run "$RUTA/code/treatmentEffects_binaryDepVar.do"                               // DONE
+
+run "$RUTA/code/treatmentEffects_continuousDepVar.do"                           // PENDING
 
 *** ERASE TEMP FILES ***********************************************************
 
-run "$RUTA\code\deleteTempFiles.do"
+run "$RUTA/code/deleteTempFiles.do"
 
 *** END OF FILE ****************************************************************
 ********************************************************************************
