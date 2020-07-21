@@ -41,8 +41,12 @@
 
 
 % APPENDICES -------------------------------------------------------------------
-
 \begin{appendices}
+
+  \startcontents[sections]
+  \printcontents[sections]{l}{1}{\setcounter{tocdepth}{1}}
+
+  \clearpage
 
 \section{Proofs and derivations}
 
@@ -52,6 +56,8 @@
 
     % add link back to document
 
+    \clearpage
+
 \section{Participants and procedures}
 
     \label{appendix:participants}
@@ -59,6 +65,8 @@
     \input{parts/appendices/appendix_participants.tex}
 
     % add link back to document
+
+    \clearpage
 
 \section{Background data}
 
@@ -68,6 +76,8 @@
 
     % add link back to document
 
+    \clearpage
+
 \section{Identifying large covariate imbalances between groups}
 
     \label{appendix:largeImbalances}
@@ -75,6 +85,14 @@
     \input{parts/appendices/appendix_largeImbalances.tex}
 
     % add link back to document
+
+    \clearpage
+
+  \section{Description of online supplementary material}
+
+  \label{appendix:onlineSupplementaryMaterial}
+
+  \input{parts/appendices/appendix_supplementaryMaterial.tex}
 
 \end{appendices}
 

@@ -51,7 +51,7 @@ di "Machine type:         `c(machine_type)'"
 
 *** USER-WRITTEN PACKAGES AND PROJECT PROGRAMS *********************************
 
-*adopath ++ "$RUTA/code/libraries/stata"                                        // PENDING
+adopath ++ "$RUTA/code/libraries/stata"                                         
 
 adopath ++ "$RUTA/code/programs"
 

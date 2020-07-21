@@ -30,6 +30,13 @@ cap net install ritest, replace
 
 cap ssc install gsreg, replace
 
+cap net install dm79, replace
+
+cap ssc install svmatf, replace
+
+cap net install texsave,                                                        ///
+    from("https://raw.githubusercontent.com/reifjulian/texsave/master") replace
+
 
 *** END OF FILE ****************************************************************
 ********************************************************************************

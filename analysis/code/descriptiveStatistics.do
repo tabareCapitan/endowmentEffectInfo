@@ -1,15 +1,11 @@
 /*******************************************************************************
-              | DEPRECATED -> Use descriptiveStatistics.do |
-********************************************************************************
 Project:      Expecting to get it: An Endowment Effect for Information
 
 Author:       TabareCapitan.com
 
-Description:  (Excel) Table with descriptive statistics
+Description:  (LaTeX) Table with descriptive statistics
 
-Known issues: putexcel often fails when saving to dropbox (just pause dropbox)
-
-Created: 20190102 | Last modified: 20200719
+Created: 20200719 | Last modified: 20200719
 *******************************************************************************/
 version 14.2
 
@@ -17,20 +13,9 @@ version 14.2
 
 use "$RUTA/results/endowmentEffectInfo.dta", clear
 
+*** LIST OF COVARIATES *********************************************************
+
 #delimit ;
-
-*** MACROS:********************************************************************;
-
-* FORMAT: TABLES --------------------------------------------------------------;
-
-global HEADER "bold vcenter hcenter font(timesnewroman, 12)";
-
-global SIDE_VAR "nobold italic right font(timesnewroman, 12)";
-
-global DATA "nobold vcenter hcenter font(timesnewroman, 12)";
-
-
-* LISTS OF COVARIATES ---------------------------------------------------------;
 
 global COVS
 
@@ -50,6 +35,7 @@ global COVS
  esc
  beta
  delta
+ hungry
 
  healthStatus
  benefitEatHealthier
@@ -66,58 +52,95 @@ global COVS
  "
  ;
 
-
-*** TABLE *********************************************************************;
-
-putexcel set "$RUTA/results/tables/descriptiveStatistics.xlsx",
-                                                        sheet(results) replace;
-
-* HEADER ----------------------------------------------------------------------,
-
-quietly putexcel A1 = "Variable", $SIDE_VAR;
-
-
-quietly putexcel  B1 = "N"
-                  C1 = "Mean"
-                  D1 = "Std. Dev."
-                  E1 = "Min"
-                  F1 = "Max"
-                  ,
-                  $HEADER;
-
-* SIDE BAR --------------------------------------------------------------------;
-
-local row = 2;
-
-foreach name in $COVS {;
-
-  quietly putexcel A`row' = "`name'", $SIDE_VAR;
-
-  local ++ row;
-
-};
-
-
-* ADD STATS -------------------------------------------------------------------;
-
-local row = 2;
-
-foreach cov of varlist $COVS {;
-
-  quietly sum `cov';
-
-  quietly putexcel  B`row' = `r(N)'
-                    C`row' = `r(mean)'
-                    D`row' = `r(sd)'
-                    E`row' = `r(min)'
-                    F`row' = `r(max)'
-                    ,
-                    $DATA;
-
-  local ++ row;
-};
-
 #delimit cr
+
+*** GET SUMMARY STATISTICS *****************************************************
+
+tabstat $COVS, columns(statistics) stats(n mean sd min max) format(%9.2g) save
+
+*** SAVE STATS TO DTA **********************************************************
+
+matrix m = r(StatTotal)'
+
+// svmatf appends, so must ensure there is nothing there
+cap erase "$RUTA/temp/data/matrix_descriptiveStats.dta"
+
+svmatf , mat(m) fil("$RUTA/temp/data/matrix_descriptiveStats.dta")
+
+*** CREATE LATEX TABLE *********************************************************
+
+use "$RUTA/temp/data/matrix_descriptiveStats.dta", clear
+
+* ROUND TO TWO DECIMAL POINTS --------------------------------------------------
+
+foreach cov of varlist mean sd min max{
+
+    replace `cov' = round(`cov', 0.01)
+}
+
+* HEADER -----------------------------------------------------------------------
+
+label var N     "N"
+label var mean  "Mean"
+label var sd    "Std. Dev."
+label var min   "Min."
+label var max   "Max."
+
+* SIDE BAR ---------------------------------------------------------------------
+
+order row
+
+rename row var
+
+replace var = "Female"           if var == "female"
+replace var = "Age"              if var == "age"
+replace var = "College degree"   if var == "collegeDegree"
+replace var = "Expenses level"   if var == "exp_cat"
+replace var = "Income level"     if var == "inc_cat"
+replace var = "Body-Mass Index"  if var == "bmi"
+replace var = "Underweight"      if var == "underWeight"
+replace var = "Proper weight"    if var == "normal"
+replace var = "Overweight"       if var == "overWeight"
+replace var = "Obese"            if var == "obese"
+
+replace var = "Risk preferences"              if var == "riskPref"
+replace var = "Food self-control"             if var == "esc"
+replace var = "Present-bias (\(\beta\))"      if var == "beta"
+replace var = "Discount factor (\(\delta\))"  if var == "delta"
+replace var = "Hunger level"                  if var == "hungry"
+
+replace var = "Health assesment"                                                ///
+    if var == "healthStatus"
+replace var = "Would benefit from eating healthier"                             ///
+    if var == "benefitEatHealthier"
+replace var = "Wish could eat healthier at home"                                ///
+    if var == "wishEatBetterHome"
+replace var = "Wish could eat healthier out"                                    ///
+    if var == "wishEatBetterOut"
+replace var = "Importance of eating healthy food"                               ///
+    if var == "healthImportant"
+replace var = "Importance of exercising regularly"                              ///
+    if var == "exerciseImportant"
+replace var = "Importance of healthy body weight"                               ///
+    if var == "weightImportant"
+
+replace var = "Knows calorie needs"                                             ///
+    if var == "calNeedsKnowledge"
+replace var = "Experience with calorie information"                             ///
+    if var == "prevExp"
+replace var = "Frequency visits to chain restaurants"                           ///
+    if var == "chain"
+
+* EXPORT TO TEX ----------------------------------------------------------------
+
+texsave using "$RUTA/results/tables/tab_descriptiveStatistics.tex",  replace    ///
+                                                                                ///
+        title("Descriptive statistics")                                         ///
+        marker(tab:descriptiveStatistics)                                       ///
+        varlabels                                                               ///
+        hlines(10 15 22 )                                                       ///
+        location(h)                                                             ///
+        frag
 
 *** END OF FILE ****************************************************************
 ********************************************************************************

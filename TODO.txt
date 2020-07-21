@@ -26,3 +26,5 @@ OTHER PENDINGS
 	- add # obs in each group to the body of the paper
 	- texdoc
 	- replication package
+		-> README + OSF
+

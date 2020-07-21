@@ -1,4 +1,4 @@
-* 00000002
+* 00000006
 *! version 1.0.0
 * Do not erase or edit this file
 * It is used by Stata to track the ado and help
@@ -57,4 +57,83 @@ d Support: email dpanigo@@ceil-conicet.gov.ar
 d 
 f g\gsreg.ado
 f g\gsreg.sthlp
+e
+S http://www.stata.com/users/vwiggins
+N grc1leg.pkg
+D 19 Jul 2020
+U 3
+d grc1leg.  Combine graphs into one graph with a common legend.
+d Program by Vince Wiggins, StataCorp <vwiggins@@stata.com>.
+d Statalist distribution, 16 June 2003.
+d 
+d Exactly like -graph combine- but shows a single common legend for all
+d combined graphs.
+d 
+d Distribution-Date: 02jun2010
+f g\grc1leg.ado
+f g\grc1leg.hlp
+e
+S http://fmwww.bc.edu/RePEc/bocode/t
+N tabout.pkg
+D 19 Jul 2020
+U 4
+d 'TABOUT': module to export publication quality cross-tabulations
+d 
+d  tabout is a table building program for oneway and twoway
+d tables of frequencies and percentages, and for summary tables. It
+d produces publication quality tables for export to a text file.
+d These tables can then be used with spreadsheets, word processors,
+d web browsers or compilers like LaTeX. The tables produced by
+d tabout allow multiple panels so that a number of variables can be
+d included in the one table. tabout also provides standard errors
+d and confidence intervals, as well as a range of table statistics
+d (chi2 etc). The output from tabout matches Stata's tabulate, most
+d of tabstat and some of table.
+d 
+d KW: tables
+d KW: latex
+d KW: html
+d KW: delimited text
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20190316
+d 
+d Author: Ian Watson , Macquarie University, Australia
+d Support: email mail@@ianwatson.com.au
+d 
+f t\tabout.ado
+f t\tabstatout.ado
+f t\tabout.hlp
+f f\figout.ado
+f f\figout.hlp
+e
+S https://raw.githubusercontent.com/reifjulian/texsave/master
+N texsave.pkg
+D 19 Jul 2020
+U 5
+d texsave. Save dataset in LaTeX format.
+d Julian Reif, University of Illinois (jreif@illinois.edu)
+f t\texsave.ado
+f t\texsave.sthlp
+f a\appendfile.ado
+f a\appendfile.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N svmatf.pkg
+D 19 Jul 2020
+U 6
+d 'SVMATF': module to save a matrix to a file
+d 
+d svmatf  saves a matrix as a dataset. It can be saved as a
+d separate dataset - or it can be added to an  existing dataset.
+d This module makes use of Nicholas J. Cox' routine svmat2, which
+d must be downloaded from STB-56.
+d 
+d Author: Jan Brogger, University of Bergen, Norway
+d Support: email  jan.brogger@@med.uib.no
+d 
+d Distribution-Date: 20020914
+f s\svmatf.ado
+f s\svmatf.hlp
 e
