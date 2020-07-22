@@ -2,15 +2,13 @@ PENDING WORK -------------------------------------------------------------------
 
 REVISE
 
-	- abstract
-	- intro
-	- conclusion
+	- abstract 	Times: |
+	- intro		Times: 
+	- conclusion	Times: |
 
 COMPLETE APPENDIX
 
 	- Appendix A:	Proofs and derivations
-	- Appendix C:	Background data				-> START HERE ON SUNDAY!
-	- Appendix D:	Method to identify large imbalances
 
 COMPLETE ONLINE SUPPLEMENTARY MATERIAL
 
@@ -27,4 +25,8 @@ OTHER PENDINGS
 	- texdoc
 	- replication package
 		-> README + OSF
+
+* LITTLE THINGS FOR AFTER SENDING IT TO LINDA ******************************************
+- fix citations in appendix "large differences"
+
 

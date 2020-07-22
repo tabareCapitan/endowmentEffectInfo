@@ -109,7 +109,7 @@ replace var = "Present-bias (\(\beta\))"      if var == "beta"
 replace var = "Discount factor (\(\delta\))"  if var == "delta"
 replace var = "Hunger level"                  if var == "hungry"
 
-replace var = "Health assesment"                                                ///
+replace var = "Health assessment"                                                ///
     if var == "healthStatus"
 replace var = "Would benefit from eating healthier"                             ///
     if var == "benefitEatHealthier"
