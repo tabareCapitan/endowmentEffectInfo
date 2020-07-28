@@ -3,40 +3,39 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: endowmentEffectInfo.aux
 The style file: chicago.bst
 Database file #1: endowmentEffectInfo.bib
-Warning--empty year in cawleyImpactInformationDisclosure
-Warning--page numbers missing in cawleyImpactInformationDisclosure
+Warning--page numbers missing in cawleyImpactInformationDisclosure2020
 Warning--no number and no volume in rafiqHowMuchCalorieundefined/ed
 Warning--no number and no volume in thunstromWelfareEffectsNudges2020
 You've used 46 entries,
             2861 wiz_defined-function locations,
-            934 strings with 14896 characters,
-and the built_in function-call counts, 31825 in all, are:
+            934 strings with 14904 characters,
+and the built_in function-call counts, 31829 in all, are:
 = -- 2768
 > -- 2138
 < -- 8
 + -- 640
 - -- 756
-* -- 2915
-:= -- 5733
+* -- 2917
+:= -- 5734
 add.period$ -- 141
 call.type$ -- 46
 change.case$ -- 319
 chr.to.int$ -- 46
-cite$ -- 50
+cite$ -- 49
 duplicate$ -- 853
-empty$ -- 1990
+empty$ -- 1991
 format.name$ -- 868
-if$ -- 5860
+if$ -- 5861
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 44
 newline$ -- 233
 num.names$ -- 466
-pop$ -- 206
+pop$ -- 198
 preamble$ -- 1
 purify$ -- 596
 quote$ -- 0
-skip$ -- 892
+skip$ -- 900
 stack$ -- 0
 substring$ -- 1929
 swap$ -- 291
@@ -44,8 +43,8 @@ text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 910
-warning$ -- 4
+warning$ -- 3
 while$ -- 503
 width$ -- 0
-write$ -- 610
-(There were 4 warnings)
+write$ -- 611
+(There were 3 warnings)

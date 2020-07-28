@@ -1,33 +1,35 @@
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage{mathtools}
-\usepackage{titletoc} % must load before hyperref
-\usepackage{hyperref}
-\usepackage[margin=1in]{geometry}
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[small,bf,center]{caption}
-\usepackage{subfig}
-\usepackage{setspace}
-\usepackage{float}
-\usepackage[section]{placeins} % for \FloatBarrier
-\usepackage{indentfirst}
-\usepackage[toc,page]{appendix}
+% PACKAGES ---------------------------------------------------------------------
+\usepackage[utf8]{inputenc}             % To write accents
+\usepackage[english]{babel}             % So LaTeX do proper hyphenation
+\usepackage[T1]{fontenc}                % Nicer default font (+ math font)
+\usepackage{csquotes}                   % To use \enquote{}
+\usepackage{titletoc}                   % Table of contents
+                                        % -> must load before hyperref
+\usepackage{hyperref}                   % Enable links
+\usepackage[margin=1in]{geometry}       % To make pretty tables
+\usepackage{booktabs}                   % To make pretty tables
+\usepackage{tabularx}                   % To make pretty tables
+\usepackage{mathtools}                  % Expand math tools
+\usepackage{amsfonts}                   % Expand math tools
+\usepackage{amsmath}                    % Expand math tools
+\usepackage{amssymb}                    % Expand math tools
+\usepackage{mathpazo}                   % Expand math tools
+\usepackage{mathabx}                    % Expand math tools
+\usepackage{graphicx}                   % Control figures
+\usepackage[small,bf,center]{caption}   % Prettier figures
+\usepackage{subfig}                     % Prettier figures
+\usepackage{setspace}                   % ...
+\usepackage{float}                      % To control figures' placement
+\usepackage[section]{placeins}          % To control figures' placement
+                                        % with \FloatBarrier
+\usepackage{indentfirst}                % I like consistency!
+\usepackage[toc,page]{appendix}         % To add appendices
+\usepackage[authoryear]{natbib}         % References
+  \bibliographystyle{chicago}           % -> style
 
+% MATH SHORTCUTS ---------------------------------------------------------------
 
-% klaas' file -------------------------
-\usepackage[T1]{fontenc}
-% Nicer default font (+ math font) than Computer Modern for most use cases
-\usepackage{mathpazo}
-\usepackage{mathabx} % Additional math symbols, like widehat, widecheck
-
-\usepackage{color} % Allow colors to be defined
-
+            % PENDING CLEAN UNUSED ONES !!!!!!!!!!!!!!!!!!!
 \setcounter{secnumdepth}{0}
 \let\IG\iffalse
 \let\ENDIG\fi
@@ -52,12 +54,6 @@
 \allowdisplaybreaks
 
 \newcommand{\brk}{\vspace*{0.8em}\hrule}
-
-% -------------------------------------
-
-
-\usepackage[authoryear]{natbib}
-  \bibliographystyle{chicago}
 
 
 \newtheorem{prop}{Proposition}

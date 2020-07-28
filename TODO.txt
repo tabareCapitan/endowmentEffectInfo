@@ -1,14 +1,17 @@
+5376 4509 6725 5755 pro
+
+vence el 7/24
+codigo 115
+
+
 PENDING WORK ---------------------------------------------------------------------------------------
 
 REVISE
 
-	- abstract 	Times: |
-	- intro		Times: 
+	- abstract 	Times: ||
+	- intro		Times: ||	
 	- conclusion	Times: |
 
-COMPLETE APPENDIX
-
-	- Appendix A:	Proofs and derivations
 
 COMPLETE ONLINE SUPPLEMENTARY MATERIAL
 
@@ -17,6 +20,7 @@ COMPLETE ONLINE SUPPLEMENTARY MATERIAL
 	(PENDING) Survey questions (ref in Appendix C)
 	(PENDING) Application of method to identify large imbalances (ref in Appendix D)
 	(PENDING) Robustness to alternative assumptions of the WTA data
+	(PENDING) Proofs?
 
 OTHER PENDINGS
 
@@ -28,5 +32,6 @@ OTHER PENDINGS
 
 * LITTLE THINGS FOR AFTER SENDING IT TO LINDA ******************************************
 - fix citations in appendix "large differences"
+
 
 
