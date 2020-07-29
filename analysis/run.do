@@ -14,16 +14,22 @@ Output:       /results/tables
               /results/figures
 
 Replication:  For a clean run, delete /temp and /results, and run this do-file
+              with your own project path (line 27) and your own
+              pdflatex path (line 31)
 
 Software:     Analyses run on Windows using Stata 14.2 SE
 
-Created: 20190217 | Last modified: 20200719
+Created: 20190217 | Last modified: 20200728
 *******************************************************************************/
 version 14.2
 
 *** DEFINE PROJECT PATH ********************************************************
 
 global RUTA "D:/Dropbox/T/r/endowmentEffectInfo/analysis"
+
+*** DEFINE pdflatex PATH *******************************************************
+
+global PDFLATEX "C:\texlive\2019\bin\win32\pdflatex"
 
 *** INITIALIZE LOG AND RECORD SYSTEM PARAMETERS ********************************
 
@@ -51,7 +57,7 @@ di "Machine type:         `c(machine_type)'"
 
 *** USER-WRITTEN PACKAGES AND PROJECT PROGRAMS *********************************
 
-adopath ++ "$RUTA/code/libraries/stata"                                         
+adopath ++ "$RUTA/code/libraries/stata"
 
 adopath ++ "$RUTA/code/programs"
 

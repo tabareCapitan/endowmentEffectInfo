@@ -5,10 +5,9 @@ Author:       TabareCapitan.com
 
 Description:  Controls the flow of the analysis
 
-Created: 20190217 | Last modified: 20200719
+Created: 20190217 | Last modified: 20200728
 *******************************************************************************/
 version 14.2
-
 
 *** SET UP *********************************************************************
 
@@ -20,27 +19,17 @@ run "$RUTA/code/installNewPrograms.do"
 
 run "$RUTA/code/importData.do"
 
-run "$RUTA/code/cleanData.do"                                                   // NEED TEXDOC
-
-*** CHOICE PROCESS DATA ********************************************************
-
-run "$RUTA/code/testUnderstanding.do"                                           // UPDATED
-
-*** ASSUMPTIONS ****************************************************************
-
-run "$RUTA/code/outliers.do"                                                    // NEED TEXDOC
-
-run "$RUTA/code/calculateValueInfo.do"                                          // NEED TEXDOC
+texdoc do "$RUTA/code/cleanData_texdoc.do"
 
 *** DATA ANALYSIS **************************************************************
 
-run "$RUTA/code/descriptiveStatistics.do"                                       // IN PROGRESS
+run "$RUTA/code/descriptiveStatistics.do"
 
-run "$RUTA/code/identifyLargeDifferences_excel.do"                              // PENDING
+run "$RUTA/code/identifyLargeDifferences_excel.do"
 
     //calls balanceMeasures.ado
 
-run "$RUTA/code/treatmentEffects_binaryDepVar.do"                               // DONE
+run "$RUTA/code/treatmentEffects_binaryDepVar.do"                               
 
 run "$RUTA/code/treatmentEffects_continuousDepVar.do"                           // PENDING
 

@@ -37,6 +37,11 @@ cap ssc install svmatf, replace
 cap net install texsave,                                                        ///
     from("https://raw.githubusercontent.com/reifjulian/texsave/master") replace
 
+cap ssc install texdoc, replace
+
+    net from http://www.stata-journal.com/production
+
+    net install sjlatex
 
 *** END OF FILE ****************************************************************
 ********************************************************************************

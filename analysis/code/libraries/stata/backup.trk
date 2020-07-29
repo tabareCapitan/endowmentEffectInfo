@@ -1,4 +1,4 @@
-* 00000006
+* 00000008
 *! version 1.0.0
 * Do not erase or edit this file
 * It is used by Stata to track the ado and help
@@ -136,4 +136,62 @@ d
 d Distribution-Date: 20020914
 f s\svmatf.ado
 f s\svmatf.hlp
+e
+S http://www.stata.com/stb/stb56
+N dm79.pkg
+D 19 Jul 2020
+U 7
+d STB-56 dm79.  Yet more matrix commands
+d STB insert by Nicholas J. Cox, University of Durham, UK
+d Support:   n.j.cox@@durham.ac.uk
+d After intallation see help ^matcorr^, help ^matselrc^, help ^matvech^,
+d help ^matvtom^, help ^svmatsv^, help ^matewmf^, help ^matvec^,
+d help ^matvsort^, and help ^svmat2^
+f m\matcorr.ado
+f m\matcorr.hlp
+f m\matewmf.ado
+f m\matewmf.hlp
+f m\matselrc.ado
+f m\matselrc.hlp
+f m\matvec.ado
+f m\matvec.hlp
+f m\matvech.ado
+f m\matvech.hlp
+f m\matvsort.ado
+f m\matvsort.hlp
+f m\matvtom.ado
+f m\matvtom.hlp
+f s\svmat2.ado
+f s\svmat2.hlp
+f s\svmatsv.ado
+f s\svmatsv.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/t
+N texdoc.pkg
+D 28 Jul 2020
+U 8
+d 'TEXDOC': module to create a LaTeX document including Stata output
+d 
+d  texdoc provides tools to create a LaTeX document  from within
+d Stata in a weaving fashion. This is especially  useful if you
+d want to produce a LaTeX document that contains  Stata output,
+d such as, e.g., a Stata Journal article or  solutions to
+d statistics homework assignments.
+d 
+d KW: LaTeX
+d KW: weaving
+d KW: Stata output
+d KW: Stata log
+d KW: reproducible research
+d 
+d Requires: Stata version 10 and sjlatex from http://www.stata-journal.com/production
+d 
+d Distribution-Date: 20180418
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f t\texdoc.ado
+f t\texdoc.sthlp
+f t\tex.ado
 e

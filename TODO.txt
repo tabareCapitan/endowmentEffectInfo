@@ -15,6 +15,9 @@ REVISE
 
 COMPLETE ONLINE SUPPLEMENTARY MATERIAL
 
+	(PENDING) TEXDOC
+			-> Data clean up			
+			-> Assumptions
 	(PENDING) Survey (ref in body)
 	(PENDING) Replication instructions (ref in body)
 	(PENDING) Survey questions (ref in Appendix C)
