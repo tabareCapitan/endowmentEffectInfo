@@ -10,6 +10,8 @@
 
 /submission/*
 
+/myPaper/feedback/*
+
 /# File types to ignore
 
 *.aux

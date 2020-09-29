@@ -2,7 +2,7 @@
 
 _[Tabaré Capitán](www.TabareCapitan.com), Linda Thunström, Klaas van ‘t Veld, and Jonas Nordström_
 
-
+<!-- FIX LINK TO PAPER -->
 We provide this repository to complement our [research article](www.tabarecapitan.com). Here you can find everything used to write the paper (materials, data, and code) and instructions to replicate.
 
 
@@ -10,13 +10,16 @@ We provide this repository to complement our [research article](www.tabarecapita
 
 ... pending
 
+
 ## Data
 
 ... pending
 
+
 ## Code
 
 ... pending
+
 
 ## Replication instructions
 
@@ -27,6 +30,7 @@ We provide this repository to complement our [research article](www.tabarecapita
 PENDING
 
 </details>
+
 
 ## Citation
 
