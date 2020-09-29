@@ -94,7 +94,7 @@ rename row var
 
 replace var = "Female"           if var == "female"
 replace var = "Age"              if var == "age"
-replace var = "College degree"   if var == "collegeDegree"
+replace var = "College"          if var == "collegeDegree"
 replace var = "Expenses level"   if var == "exp_cat"
 replace var = "Income level"     if var == "inc_cat"
 replace var = "Body-Mass Index"  if var == "bmi"

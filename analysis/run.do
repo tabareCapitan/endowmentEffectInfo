@@ -13,15 +13,14 @@ Input:        /rawData
 Output:       /results/tables
               /results/figures
 
-Replication:  For a clean run, delete /temp and /results, and run this do-file
-              with your own project path (line 27) and your own
-              pdflatex path (line 31)
+Replication:  Add your project path (line 27) and your pdflatex path (line 31)
 
 Software:     Analyses run on Windows using Stata 14.2 SE
 
 Created: 20190217 | Last modified: 20200728
 *******************************************************************************/
 version 14.2
+
 
 *** DEFINE PROJECT PATH ********************************************************
 
@@ -30,6 +29,12 @@ global RUTA "D:/Dropbox/T/r/endowmentEffectInfo/analysis"
 *** DEFINE pdflatex PATH *******************************************************
 
 global PDFLATEX "C:\texlive\2019\bin\win32\pdflatex"
+
+*** UNCOMMENT THIS SECTION FOR A CLEAN RUN ************************************* PENDING
+
+
+  //..
+
 
 *** INITIALIZE LOG AND RECORD SYSTEM PARAMETERS ********************************
 
@@ -74,6 +79,11 @@ cap mkdir "$RUTA/results/tables"
 *** RUN ANALYSIS ***************************************************************
 
 run "$RUTA/code/main.do"
+
+*** COPY TABLES AND FIGURES WITH PROPER NAME TO PAPER FOLDER *******************  // PENDING
+
+
+
 
 *** END LOG ********************************************************************
 

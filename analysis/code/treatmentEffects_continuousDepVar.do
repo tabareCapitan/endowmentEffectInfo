@@ -32,7 +32,6 @@ global DIFS_NOINFO
 global DIFS_INFO
   "
   age
-  collegeDegree
   exp_cat
   hungry
   healthStatus
@@ -57,7 +56,7 @@ global SEED = 0.5
 
 * LOAD DATA --------------------------------------------------------------------
 
-use "$RUTA\data\refDepData.dta" if prime == 0, clear
+use "$RUTA/results/endowmentEffectInfo.dta" if prime == 0, clear
 
 * UNCONDITIONAL ESTIMATOR ------------------------------------------------------
 
@@ -73,12 +72,12 @@ ritest endow _b[endow], right seed($SEED) nodots reps($REPS):                   
 // Run all possible regressions
 
 gsreg valinfoim $DIFS_NOINFO , fixvar(endow) cmdoptions(robust) nocount         ///
-                         replace resultsdta("$RUTA\data\temp\difs_noinfoValue")
+                         replace resultsdta("$RUTA/temp/data/difs_noinfoValue")
 
 
 // Load data of all estimates
 
-use "$RUTA\data\temp\difs_noinfoValue", clear
+use "$RUTA/temp/data/difs_noinfoValue", clear
 
 
 // Rename bars
@@ -149,7 +148,7 @@ twoway  (scatter endow_c endow_p1T,  msymbol(o) msize(small)  mcolor(gs10) )
         xlabel(0.01 "0.01" 0.05 "0.05" 0.1 "0.1", grid gextend)
         xtitle("pvalue")
         ytitle("Treatment effect", orientation(rvertical))
-        saving("$RUTA\figures\stata\middle.dta", replace);
+        saving("$RUTA/temp/figures/middle.dta", replace);
 
 // LEFT: HISTOGRAM OF COEFFICIENTS;
 
@@ -162,7 +161,7 @@ twoway  hist endow_c ,
         fxsize(25)
         xlabel( #3, ang(h))
         ylabel(0(0.25)1, ang(h))
-        saving("$RUTA\figures\stata\left.dta", replace);
+        saving("$RUTA/temp/figures/left.dta", replace);
 
 
 // BOTTOM: HISTOGRAM OF PVALUES;
@@ -176,19 +175,19 @@ twoway  histogram endow_p1T,
         ylabel(0(0.07)0.21,nogrid ang(h))
         ytitle(,orientation(rvertical))
         xlabel(0.01 "0.01" 0.05 "0.05" 0.1 "0.1", grid gextend)
-        saving("$RUTA\figures\stata\bottom.dta", replace);
+        saving("$RUTA/temp/figures/bottom.dta", replace);
 
 // COMBINE ALL THREE GRAPHS
 
-graph combine   "$RUTA\figures\stata\left.dta"
-                "$RUTA\figures\stata\middle.dta"
-                "$RUTA\figures\stata\bottom.dta"
+graph combine   "$RUTA/temp/figures/left.dta"
+                "$RUTA/temp/figures/middle.dta"
+                "$RUTA/temp/figures/bottom.dta"
                 ,
                 hole(3)
                 imargin(0 0 0 0)
                 graphregion(margin(l=22 r=22));
 
-graph export "$RUTA\figures\hypotheticalChoices_NoInfoValue.png",
+graph export "$RUTA/results/figures/hypotheticalChoices_NoInfoValue.png",
                                     replace width(11000) height(8000);
 
 #delimit cr
@@ -198,7 +197,7 @@ graph export "$RUTA\figures\hypotheticalChoices_NoInfoValue.png",
 
 * LOAD DATA --------------------------------------------------------------------
 
-use "$RUTA\data\refDepData.dta" if prime == 1, clear
+use "$RUTA/results/endowmentEffectInfo.dta" if prime == 1, clear
 
 * UNCONDITIONAL ESTIMATOR ------------------------------------------------------
 
@@ -213,12 +212,12 @@ ritest endow _b[endow], right seed($SEED) nodots reps($REPS):                   
 // Run all possible regressions
 
 gsreg valinfoim $DIFS_INFO , fixvar(endow) cmdoptions(robust) nocount           ///
-                          replace resultsdta("$RUTA\data\temp\difs_infoValue")
+                          replace resultsdta("$RUTA/temp/data/difs_infoValue")
 
 
 // Load data of all estimates
 
-use "$RUTA\data\temp\difs_infoValue", clear
+use "$RUTA/temp/data/difs_infoValue", clear
 
 // Rename vars
 
@@ -286,7 +285,7 @@ twoway  (scatter endow_c endow_p1T,  msymbol(o) msize(small)  mcolor(gs10) )
         xlabel(0.01 "0.01" 0.05 "0.05" 0.1 "0.1", grid gextend)
         xtitle("pvalue")
         ytitle("Treatment effect", orientation(rvertical))
-        saving("$RUTA\figures\stata\middle.dta", replace);
+        saving("$RUTA/temp/figures/middle.dta", replace);
 
 // LEFT: HISTOGRAM OF COEFFICIENTS;
 
@@ -299,7 +298,7 @@ twoway  hist endow_c ,
         fxsize(25)
         xlabel( #3, ang(h))
         ylabel(0(0.25)1, ang(h))
-        saving("$RUTA\figures\stata\left.dta", replace);
+        saving("$RUTA/temp/figures/left.dta", replace);
 
 
 // BOTTOM: HISTOGRAM OF PVALUES;
@@ -313,19 +312,19 @@ twoway  histogram endow_p1T,
         ylabel(0(0.07)0.21,nogrid ang(h))
         ytitle(,orientation(rvertical))
         xlabel(0.01 "0.01" 0.05 "0.05" 0.1 "0.1", grid gextend)
-        saving("$RUTA\figures\stata\bottom.dta", replace);
+        saving("$RUTA/temp/figures/bottom.dta", replace);
 
 // COMBINE ALL THREE GRAPHS
 
-graph combine   "$RUTA\figures\stata\left.dta"
-                "$RUTA\figures\stata\middle.dta"
-                "$RUTA\figures\stata\bottom.dta"
+graph combine   "$RUTA/temp/figures/left.dta"
+                "$RUTA/temp/figures/middle.dta"
+                "$RUTA/temp/figures/bottom.dta"
                 ,
                 hole(3)
                 imargin(0 0 0 0)
                 graphregion(margin(l=22 r=22));
 
-graph export "$RUTA\figures\hypotheticalChoices_InfoValueWTA.png",
+graph export "$RUTA/results/figures/hypotheticalChoices_InfoValueWTA.png",
                                     replace width(11000) height(8000);
 
 #delimit cr

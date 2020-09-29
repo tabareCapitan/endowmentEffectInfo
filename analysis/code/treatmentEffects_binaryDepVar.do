@@ -33,7 +33,6 @@ global DIFS_NOINFO
 global DIFS_INFO
   "
   age
-  collegeDegree
   exp_cat
   hungry
   healthStatus

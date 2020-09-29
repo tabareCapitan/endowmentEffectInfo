@@ -25,17 +25,17 @@ texdoc do "$RUTA/code/cleanData_texdoc.do"
 
 run "$RUTA/code/descriptiveStatistics.do"
 
-run "$RUTA/code/identifyLargeDifferences_excel.do"
+run "$RUTA/code/identifyLargeDifferences.do"
 
     //calls balanceMeasures.ado
 
-run "$RUTA/code/treatmentEffects_binaryDepVar.do"                               
+run "$RUTA/code/treatmentEffects_binaryDepVar.do"
 
-run "$RUTA/code/treatmentEffects_continuousDepVar.do"                           // PENDING
+run "$RUTA/code/treatmentEffects_continuousDepVar.do"
 
-*** ERASE TEMP FILES ***********************************************************
+*run "$RUTA/code/treatmentEffects_continuousDepVar_tr.do"                        // PENDING
 
-run "$RUTA/code/deleteTempFiles.do"
+*run "$RUTA/code/treatmentEffects_continuousDepVar_cn.do"                        // PENDING
 
 *** END OF FILE ****************************************************************
 ********************************************************************************

@@ -1,40 +1,40 @@
-5376 4509 6725 5755 pro
+PENDING STUFF
 
-vence el 7/24
-codigo 115
+- JEl codes, see C90
+- Edits based on comments by Jonas
+- Change % of values below certain level in the high baseline with the updated 9 covariates with large imbalances (instead of the 10)
+- WTA robustness results for the Supplementary material
+- Fix citations in appendix "large differences"
+- Proofs?- change title of graphs in aplication to identify large differences
+- replication package and instructions
+	-> README + OSF
+- qsf files
 
+- add some on external validity (see JL paper the dozen things ... should do more of
+- MHT?
 
-PENDING WORK ---------------------------------------------------------------------------------------
-
-REVISE
-
-	- abstract 	Times: ||
-	- intro		Times: ||	
-	- conclusion	Times: |
-
-
-COMPLETE ONLINE SUPPLEMENTARY MATERIAL
-
-	(PENDING) TEXDOC
-			-> Data clean up			
-			-> Assumptions
-	(PENDING) Survey (ref in body)
-	(PENDING) Replication instructions (ref in body)
-	(PENDING) Survey questions (ref in Appendix C)
-	(PENDING) Application of method to identify large imbalances (ref in Appendix D)
-	(PENDING) Robustness to alternative assumptions of the WTA data
-	(PENDING) Proofs?
-
-OTHER PENDINGS
-
-	- evaluation of MPL?
-	- add # obs in each group to the body of the paper
-	- texdoc
-	- replication package
-		-> README + OSF
-
-* LITTLE THINGS FOR AFTER SENDING IT TO LINDA ******************************************
-- fix citations in appendix "large differences"
+- alvaro carrial export stata results to latex
+see www for updated version
 
 
+twitter answer to MHT
+I think that relates to testing multiple simultaneous hypotheses within a model. To me, the chart raises issues more related to model selection.
 
+A useful paper on this: http://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf
+
+One could also do Bayesian model averaging.
+
+Good point. Ideally, all models should be estimated simultaneously, you cannot just evaluate whether CI's overlap if they are estimated on overlapping samples.. Should be possible in a giant, stacked regression, I guess. Nonetheless, pointwise CI's seem to be standard reporting.
+
+check if in the ref dep paper I confuse pp for %!!!!
+
+||| JMP Notes |||---------------------------------------------------------------
+
+- add Karen Ye's paper on endowment effect with fmri data?
+- plan what to answer for the question: "where did you get the idea for the job market paper?"
+- add caption to tables such as descriptive statistics (what is a 3.4 without the likert scale)
+// ssc install svmatf, replace
+ // dependency: net install dm79.pkg
+- section 4. results should be a subsection of section 3 (experimental evidence)
+- add recruitment flyer to supplementary material
+--------------------------------------------------------------------------------

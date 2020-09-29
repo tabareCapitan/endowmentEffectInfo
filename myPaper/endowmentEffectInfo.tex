@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+\input{parts/preamble.tex}
+
+\setcounter{secnumdepth}{1}
+
+\begin{document}
+
+
+% FIRST PAGE -------------------------------------------------------------------
+
+\input{parts/title.tex}
+
+%\input{parts/titleAnon.tex}
+
+
+% PAPER ------------------------------------------------------------------------
+
+\section{Introduction}
+
+  \input{parts/intro.tex}
+
+\section{Theory: Disappointment Aversion and the \\ Kőszegi and Rabin approach}
+
+  \input{parts/theory.tex}
+
+\section{Experimental evidence}
+
+  \input{parts/experiment.tex}
+
+\section{Results}
+
+  \input{parts/results.tex}
+
+\section{Conclusion}
+
+  \input{parts/conclusion.tex}
+
+
+% REFERENCES -------------------------------------------------------------------
+
+\bibliography{endowmentEffectInfo}
+
+\clearpage
+
+
+% APPENDICES -------------------------------------------------------------------
+\begin{appendices}
+
+  \startcontents[sections]
+  \printcontents[sections]{l}{1}{\setcounter{tocdepth}{1}}
+
+  \clearpage
+
+\section{Derivations}
+
+    \label{appendix:theory}
+
+    \input{parts/appendices/appendix_theory.tex}
+
+    % add link back to document
+
+    \clearpage
+
+\section{Participants and procedures}
+
+    \label{appendix:participants}
+
+    \input{parts/appendices/appendix_participants.tex}
+
+    % add link back to document
+
+    \clearpage
+
+\section{Background data}
+
+    \label{appendix:background}
+
+    \input{parts/appendices/appendix_background.tex}
+
+    % add link back to document
+
+    \clearpage
+
+\section{Identifying large covariate imbalances between groups}
+
+    \label{appendix:largeImbalances}
+
+    \input{parts/appendices/appendix_largeImbalances.tex}
+
+    % add link back to document
+
+    \clearpage
+
+\section{Description of online supplementary material}
+
+  \label{appendix:onlineSupplementaryMaterial}
+
+  \input{parts/appendices/appendix_supplementaryMaterial.tex}
+
+\end{appendices}
+
+
+\end{document}
+
+% END OF FILE ------------------------------------------------------------------
+% ------------------------------------------------------------------------------

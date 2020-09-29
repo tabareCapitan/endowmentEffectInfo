@@ -245,6 +245,13 @@ tab nN
 tab nE
 tab pN
 tab pE
+
+gen treatment = ""
+
+  replace treatment = "nN" if nN == 1
+  replace treatment = "nE" if nE == 1
+  replace treatment = "pN" if pN == 1
+  replace treatment = "pE" if pE == 1
 texdoc stlog close
 
 /*tex
@@ -276,15 +283,17 @@ and 2 if they chose to have it removed.
 tex*/
 
 texdoc stlog, do
-gen wantcalinfo = .
-replace wantcalinfo = 1 if endow == 1 & keepon_or_remove == 2
-replace wantcalinfo = 0 if endow == 1 & keepon_or_remove == 1
-replace wantcalinfo = 1 if endow == 0 & add_or_keep_off == 1
-replace wantcalinfo = 0 if endow == 0 & add_or_keep_off == 2
-tab wantcalinfo
-assert wantcalinfo < .
+gen wantCalInfo = .
+replace wantCalInfo = 1 if endow == 1 & keepon_or_remove == 2
+replace wantCalInfo = 0 if endow == 1 & keepon_or_remove == 1
+replace wantCalInfo = 1 if endow == 0 & add_or_keep_off == 1
+replace wantCalInfo = 0 if endow == 0 & add_or_keep_off == 2
+tab wantCalInfo
+assert wantCalInfo < .
 drop keepon_or_remove add_or_keep_off
 texdoc stlog close
+
+gen wantcalinfo = wantCalInfo // to match the rest of this dofile with old name
 
 /*tex
 \subsection{Variables indicating how well the subject understood the BDM
@@ -953,9 +962,9 @@ college or a college degree.
 tex*/
 
 texdoc stlog, do
-mark college if education == 3 | education == 4
-tab college
-label var college "Some college or finished college"
+mark collegeDegree if education == 3 | education == 4
+tab collegeDegree
+label var collegeDegree "Some college or finished college"
 texdoc stlog close
 
 /*tex
@@ -979,8 +988,9 @@ create dummies for each item.
 tex*/
 
 texdoc stlog, do
-label var riskpref "Risk preference (1 = low, 6 = high)"
-tab riskpref, generate(riskpref_)
+rename riskpref riskPref
+label var riskPref "Risk preference (1 = low, 6 = high)"
+tab riskPref, generate(riskPref_)
 texdoc stlog close
 
 /*tex
@@ -1041,6 +1051,7 @@ summ foodsc
 label var foodsc "Food self-control index (10 = lowest, 50 = highest)"
 texdoc stlog close
 
+gen esc = foodsc // to match with old naming
 /*tex
 \subsection{Discounting}
 
@@ -1365,6 +1376,8 @@ label var hlfdimp "Importance of healthy food (1 = not at all, 5 = extremely)"
 drop important_1
 texdoc stlog close
 
+gen healthImportant = hlfdimp // match old naming
+
 /*tex
 Also create dummies for each Likert-scale item.
 tex*/
@@ -1407,6 +1420,8 @@ tab exerimp
 label var exerimp "Importance of exercise (1 = not at all, 5 = extremely)"
 drop important_2
 texdoc stlog close
+
+gen exerciseImportant = exerimp // match old naming
 
 /*tex
 Also create dummies for each Likert-scale item,
@@ -1452,6 +1467,8 @@ label var wghtimp "Importance of healthy weight (1 = not at all, 5 = extremely)"
 drop important_3
 texdoc stlog close
 
+gen weightImportant = wghtimp // match old naming
+
 /*tex
 Also create dummies for each Likert-scale item.
 tex*/
@@ -1480,9 +1497,10 @@ create dummies for each item.
 tex*/
 
 texdoc stlog, do
-tab prevexp
-label var prevexp "Previous info exposure (1 = never, 5 = always)"
-tab prevexp, generate(prevexp_)
+rename prevexp prevExp
+tab prevExp
+label var prevExp "Previous info exposure (1 = never, 5 = always)"
+tab prevExp, generate(prevExp_)
 texdoc stlog close
 
 /*tex
@@ -1514,6 +1532,8 @@ recode chain  (1=6) (2=5) (3=4) (4=3) (5=2) (6=1), gen(frqchn)
 tab frqchn
 drop chain
 label var frqchn "Frequenting of chain restaurants (1 = rarely, 6 = every day)"
+
+gen chain = frqchn // to match old naming
 
 tab coffee
 recode coffee (1=6) (2=5) (3=4) (4=3) (5=2) (6=1), gen(frqcof)
@@ -1572,6 +1592,8 @@ label var shdeat "Calories a male should eat (1 = 50, 4 = 2,500, 7 = 10,000)"
 drop shouldeatQ
 texdoc stlog close
 
+gen calNeedsKnowledge = shdeat // to match old naming
+
 /*tex
 Also create dummies for each Likert-scale item.
 tex*/
@@ -1626,6 +1648,12 @@ rename health_4 eatbout
 label var eatbout "Want to eat healthier out (1 = disagree, 5 = agree)"
 texdoc stlog close
 
+// this is to match old naming
+gen healthStatus = healths
+gen benefitEatHealthier = eatbshd
+gen wishEatBetterHome = eatbhom
+gen wishEatBetterOut = eatbout
+
 /*tex
 Also create dummies for each Likert-scale item
 tex*/
@@ -1673,14 +1701,16 @@ tab weightd
 label var weightd "Self-described weight category (1 = underweight, 5 = obese)"
 drop weight_descrQ
 
-mark unweight  if weightd == 1
-label var unweight "Self-described underweight"
-mark nmweight if weightd == 2
-label var nmweight "Self-described normal weight"
-mark ovweight   if weightd == 3
-label var ovweight "Self-described overweight"
-mark obweight        if weightd == 4
-label var obweight "Self-described obese"
+gen weightDesc = weightd
+
+mark underWeight  if weightd == 1
+label var underWeight "Self-described underweight"
+mark normalWeight if weightd == 2
+label var normalWeight "Self-described normal weight"
+mark overWeight   if weightd == 3
+label var overWeight "Self-described overweight"
+mark obese        if weightd == 4
+label var obese "Self-described obese"
 mark dkweight   if weightd == .
 label var dkweight "Self-described don't know weight"
 texdoc stlog close
@@ -1748,7 +1778,7 @@ housing, transportation, utilities, and other items?'' variable
 I'd rather not say & 11
 \end{tabular}
 
-Rename his variable \verb~expcat~ and use it to calculate a continuous
+Rename this variable \verb~expcat~ and use it to calculate a continuous
 \verb~expenditure~ variable by using the midpoint of the intervals (picking
 \$2,100 for the top one). Recode ``I'd rather not say'' as missing.
 
@@ -1771,13 +1801,15 @@ replace expend = 1.500 if expcat ==  7
 replace expend = 1.700 if expcat ==  8
 replace expend = 1.900 if expcat ==  9
 replace expend = 2.100 if expcat == 10
-replace expend =    . if expcat == 11
+replace expend =  .    if expcat == 11
 tab expend
 label var expend "Monthly expenditure x $1000 (don't know coded as missing)"
 gen expend2 = expend
 replace expend2 = 0 if expend == .
 label var expend2 "Monthly expenditure x $1000 (don't know coded as 0)"
 texdoc stlog close
+
+gen exp_cat = expend // to match old naming
 
 /*tex
 Save the ``I'd rather not say'' category as a separate dummy \verb~expdec~ (for
@@ -1833,13 +1865,15 @@ replace income =  22.500 if inccat ==  6
 replace income =  27.500 if inccat ==  7
 replace income =  40.000 if inccat ==  8
 replace income =  60.000 if inccat ==  9
-replace income =      . if inccat == 10
+replace income =    .    if inccat == 10
 tab income
 label var income  "Annual income x $1000 (don't know coded as missing)"
 gen income2 = income
 replace income2 = 0 if income == .
 label var income2 "Annual income x $1000 (don't know coded as 0)"
 texdoc stlog close
+
+gen inc_cat = income // to match old naming
 
 /*tex
 Save the ``I'd rather not say'' category as a separate dummy \verb~incdec~ (for
@@ -1929,7 +1963,7 @@ texdoc stlog close
 tex*/
 
 texdoc stlog, do
-save "$RUTA/temp/data/clean.dta", replace
+save "$RUTA/results/endowmentEffectInfo.dta", replace
 
 texdoc stlog close
 
@@ -1939,6 +1973,10 @@ tex*/
 
 
 *** CREATE PDF *****************************************************************
+
+! $PDFLATEX "$RUTA/code/logs/texdoc/cleanData.tex"
+
+// and a second time for the table of tableofcontents
 
 ! $PDFLATEX "$RUTA/code/logs/texdoc/cleanData.tex"
 
