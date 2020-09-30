@@ -29,6 +29,10 @@
 \usepackage[authoryear]{natbib}         % References
   \bibliographystyle{chicago}           % -> style
 
+\newcommand{\possessivecite}[1]{\citeauthor{#1}'s \citeyear{#1}}
+\newcommand{\possessivecitet}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+\bibpunct{(}{)}{;}{;}{,}{,}
+
 % MATH SHORTCUTS ---------------------------------------------------------------
 
             % PENDING CLEAN UNUSED ONES !!!!!!!!!!!!!!!!!!!
