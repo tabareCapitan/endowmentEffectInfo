@@ -1,5 +1,5 @@
 % PACKAGES ---------------------------------------------------------------------
-\setcounter{secnumdepth}{1}
+\setcounter{secnumdepth}{3}             % Number sections and subsection
 \usepackage[utf8]{inputenc}             % To write accents
 \usepackage[english]{babel}             % So LaTeX do proper hyphenation
 \usepackage[T1]{fontenc}                % Nicer default font (+ math font)
@@ -15,9 +15,9 @@
 \usepackage{amsmath}                    % Expand math tools
 \usepackage{amssymb}                    % Expand math tools
 \usepackage{mathpazo}                   % Expand math tools
-\usepackage{xcolor}                     % Add color to text
 \usepackage{mathabx}                    % Expand math tools
 \usepackage{graphicx}                   % Control figures
+\usepackage{xcolor}
 \usepackage[small,bf,center]{caption}   % Prettier figures
 \usepackage{subfig}                     % Prettier figures
 \usepackage{setspace}                   % ...
@@ -26,17 +26,20 @@
                                         % with \FloatBarrier
 \usepackage{indentfirst}                % I like consistency!
 \usepackage[toc,page]{appendix}         % To add appendices
-\usepackage[authoryear]{natbib}         % References
+% \usepackage[authoryear]{natbib}              % References
+\usepackage[longnamesfirst,authoryear]{natbib} % avoid "et. al"
   \bibliographystyle{chicago}           % -> style
 
 \newcommand{\possessivecite}[1]{\citeauthor{#1}'s \citeyear{#1}}
 \newcommand{\possessivecitet}[1]{\citeauthor{#1}'s (\citeyear{#1})}
 \bibpunct{(}{)}{;}{;}{,}{,}
 
+
+\linespread{1.3} % 1.5 line spacing
+
+
 % MATH SHORTCUTS ---------------------------------------------------------------
 
-            % PENDING CLEAN UNUSED ONES !!!!!!!!!!!!!!!!!!!
-\setcounter{secnumdepth}{0}
 \let\IG\iffalse
 \let\ENDIG\fi
 \def\D{\displaystyle}
@@ -61,5 +64,6 @@
 
 \newcommand{\brk}{\vspace*{0.8em}\hrule}
 
+\DeclareMathOperator*{\argmax}{\arg\max}   % rbp
 
 \newtheorem{prop}{Proposition}

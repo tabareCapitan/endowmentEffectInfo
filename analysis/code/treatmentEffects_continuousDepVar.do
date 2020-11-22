@@ -187,7 +187,7 @@ graph combine   "$RUTA/temp/figures/left.dta"
                 imargin(0 0 0 0)
                 graphregion(margin(l=22 r=22));
 
-graph export "$RUTA/results/figures/hypotheticalChoices_NoInfoValue.png",
+graph export "$RUTA/results/figures/hypotheticalChoices_NoInfoWTA.png",
                                     replace width(11000) height(8000);
 
 #delimit cr
@@ -324,7 +324,7 @@ graph combine   "$RUTA/temp/figures/left.dta"
                 imargin(0 0 0 0)
                 graphregion(margin(l=22 r=22));
 
-graph export "$RUTA/results/figures/hypotheticalChoices_InfoValueWTA.png",
+graph export "$RUTA/results/figures/hypotheticalChoices_InfoWTA.png",
                                     replace width(11000) height(8000);
 
 #delimit cr

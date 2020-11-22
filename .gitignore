@@ -1,5 +1,9 @@
 /# Folders to ignore
 
+/analysis/code/logs/*
+
+/analysis/temp/*
+
 /talks/*
 
 /relatedPapers/*
