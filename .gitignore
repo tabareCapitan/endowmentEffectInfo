@@ -16,6 +16,8 @@
 
 /myPaper/*
 
+
+
 /# File types to ignore
 
 *.aux
@@ -27,4 +29,9 @@
 *.bbl
 *.blg
 
-next.md
+
+/# Files to ignore
+
+to-do.md
+priorities.md
+ideas.md
