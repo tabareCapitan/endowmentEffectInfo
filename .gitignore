@@ -14,7 +14,7 @@
 
 /submission/*
 
-/myPaper/*
+/#  /myPaper/*
 
 
 
@@ -31,7 +31,3 @@
 
 
 /# Files to ignore
-
-to-do.md
-priorities.md
-ideas.md
