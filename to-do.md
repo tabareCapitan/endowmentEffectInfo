@@ -1,11 +1,6 @@
 # OVERALL
 
 - Address feedback!
-  - Ori Heffetz
-  - Keith Ericson
-  - Esteban Mendez
-  - Ricardo Perez Truglia
-  - Astorga
 - Go over theory carefully and rederive everything
 - Keep reading related literature
 - send paper to koszegi and rabin for comments
@@ -110,7 +105,6 @@
 # TALK AND INTERVIEWS
 
 - Answer to: "where did you get the idea for the job market paper?"
-
 
 
 # WAY LATER
