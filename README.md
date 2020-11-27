@@ -26,7 +26,7 @@ In `./analysis/rawData/`:
 
 ## Code
 
-We use Stata 14.2 (SE) to conduct all analyses. The file main.do controls the execution of the rest of the files. To execute main.do, a specific folder structure is assumed (see Replication instructions below).
+We use Stata 14.2 (SE) to conduct all analyses. The file main.do controls the execution of the rest of the files. To execute `main.do`, a specific folder structure is assumed (see Replication instructions below).
 
 In `./analysis/code/`:
 
@@ -53,7 +53,7 @@ We want our work to be replicated. To that end, we include **one** script to rep
 ```bash
 analysis
 ├── rawData
-│   ├── data.csv
+│   └── data.csv
 ├── code
 │   ├── main.do
 │   ├── installNewPrograms.do
@@ -63,8 +63,8 @@ analysis
 
 ### Editing `run.do`
 
-1. In line 27, add your local path to global macro `RUTA`.
-2. In line 31, add your pdflatex path to global macro `PDFLATEX`.
+- In line 27, add your local path to global macro `RUTA`
+- In line 31, add your pdflatex path to global macro `PDFLATEX`
 
 ### Description of `run.do` file
 
