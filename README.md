@@ -1,9 +1,9 @@
 # Expecting to get it: An endowment effect for information
 
-_[Tabaré Capitán](www.TabareCapitan.com), Linda Thunström, Klaas van ‘t Veld, and Jonas Nordström_
+_[Tabaré Capitán](http://tabarecapitan.com/), Linda Thunström, Klaas van ‘t Veld, and Jonas Nordström_
 
 <!-- FIX LINK TO PAPER -->
-We provide this repository to complement our [research article](www.tabarecapitan.com/jmp/). We include both the raw data and the code to run the analyses reported in the article.
+We provide this repository to complement our [research article](http://tabarecapitan.com/jmp/). We include both the raw data and the code to run the analyses reported in the article.
 
 
 ## Materials
