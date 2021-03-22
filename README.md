@@ -2,6 +2,17 @@
 
 _[Tabaré Capitán](http://tabarecapitan.com/), Linda Thunström, Klaas van ‘t Veld, and Jonas Nordström_
 
+<details>
+  <summary>See abstract</summary>
+
+  > In this paper we predict and find evidence for an “endowment effect for information”—a tendency to value information more if getting the information is expected than if it is not expected. We show that the two leading theories of expectations-based reference-dependent preferences imply such an endowment effect, and find evidence supporting this prediction in an experiment that manipulates participants’ expectations. The effect implies that the net benefits from information policies may vary with people’s expectations:  consumers  who  regularly  see  information  about  the  calories  in  their food, the energy use of their appliances, or the carbon footprint of their flights may come to expect access to such information and then end up valuing it more.
+  >
+  > _JEL codes_: D01, D80, D83, D84, D91, C91
+  >  
+  > _Keywords_: expectations,  reference-dependent  preferences,  preferences  for  information, information avoidance, endowment effect, welfare analysis
+
+</details>
+
 <!-- FIX LINK TO PAPER -->
 We provide this repository to complement our [research article](http://tabarecapitan.com/jmp/). We include both the raw data and the code to run the analyses reported in the article.
 
